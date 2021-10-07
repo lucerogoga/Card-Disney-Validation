@@ -6,13 +6,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Tarjeta de Validacion</h1>
-    </header>
-    <main></main>
-    <div>
-
-    </div>
+    <main id="content" class="content">
+   <section class="ImagenTarjeta">
+          <div>
+            <div>
+              <label>Numero de Tarjeta</label>
+              <p id="NumCard"></p>
+          </div>
+     </section> 
+    <form>
+      <div class="Tarjeta">
+         <!-- solo numero,solo 16 digitos, -->
+          <div class="TxtValidar">
+            <label>Numero de tarjeta</label>
+            <input  placeholder="Numero de Tarjeta" type="tel" id="NumTarjeta"  maxlength="19" pattern="[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}" required>
+          </div>
+            <div class="TxtNombre">
+              <label>Nombre de tarjeta</label>
+              <input  placeholder="Nombre" type="text" id="Nombre"  required>
+            </div>
+            <button class="BtnValidar" id="BtnValidarLunh">Validar</button>
+       </div>
+      </form>
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
