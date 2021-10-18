@@ -6,16 +6,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main id="content" class="content">
-   <section class="ImagenTarjeta">
-          <div>
-            <div>
-              <label>Numero de Tarjeta</label>
+    <header>
+      <div class="flex slcTarjeta">
+        <img class="disneyLogo" src="img/disney_logo.png">
+        <h2>Tarjetas Personalizadas</h2>
+      </div>
+    </header>
+    <section id="Pantalla1" class="activo">
+      <div class="Pantalla">
+      <div class="flex slcTarjeta">
+      <h4>Elije el diseño de tu nueva tarjeta de</h4>
+        <select class="slcTipoTarjeta"name="Tipo de Tarjeta">
+          <option>Credito</option>
+          <option>Debito</option>
+        </select>
+      </div>
+      <div class="flex">
+        <div class="Tarjeta">
+          <img id="tarjeta1" class="imagen" src="img/disney1.png">
+          <p class="TarjetaNom">Diseño Lilo y stich</p>
+        </div>
+        <div class="Tarjeta">
+          <a id="tarjeta2"><img class="imagen" src="img/disney2.png"></a>
+          <p class="TarjetaNom">Diseño Toy story</p>
+        </div>
+        <div class="Tarjeta">
+          <a id="tarjeta3"><img class="imagen" src="img/disney3.png"></a>
+          <p class="TarjetaNom">Diseño Princesas Disney</p>
+        </div>
+      </div>
+    </div>
+    </section>
+   <section id="Pantalla2" class="ImagenTarjeta oculto">
+     <div class="Pantalla">
+          <div class="NumTarjeta">
+              <label>Numero de Tarjeta a Validar</label>
               <p id="NumCard"></p>
           </div>
-     </section> 
     <form>
-      <div class="Tarjeta" id="tarjeta">
+      <div class="DatosTarjeta" id="tarjeta">
          <!-- solo numero,solo 16 digitos, -->
           <div class="txtValidar">
             <label>Numero de tarjeta</label>
@@ -23,12 +52,15 @@
           </div>
             <div class="TxtNombre">
               <label>Nombre de tarjeta</label>
-              <input  placeholder="Nombre" type="text" id="Nombre"  required>
+              <input  placeholder="Nombre" type="text" id="Nombre" autocomplete="off" required>
             </div>
             <button class="BtnValidar" id="BtnValidarLunh">Validar</button>
+            <button class="BtnReinicias" id="BtnReiniciar">Atras</button>
        </div>
       </form>
-    </main>
+    </div>
+    </section> 
+    
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
