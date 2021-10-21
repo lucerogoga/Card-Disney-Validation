@@ -16,7 +16,7 @@
       <div class="Pantalla">
       <div class="flex slcTarjeta">
       <h4>Elije el diseño de tu nueva tarjeta de</h4>
-        <select class="slcTipoTarjeta"name="Tipo de Tarjeta">
+        <select class="slcTipoTarjeta" name="TipodeTarjeta" >
           <option>Credito</option>
           <option>Debito</option>
         </select>
@@ -52,16 +52,26 @@
          <!-- solo numero,solo 16 digitos, -->
           <div class="txtValidar">
             <label>Numero de tarjeta</label>
-            <input  placeholder="Numero de Tarjeta" type="tel" id="NumTarjeta"  maxlength="19" autocomplete="off" required>
+            <input  class="input" placeholder="Numero de Tarjeta" type="tel" id="NumTarjeta"  maxlength="19" autocomplete="off" required>
           </div>
             <div class="TxtNombre">
               <label>Nombre de tarjeta</label>
-              <input  placeholder="Nombre" type="text" id="Nombre" autocomplete="off" required>
+              <input class="input" placeholder="Nombre" type="text" id="Nombre" autocomplete="off" required>
             </div>
-            <button class="Boton" id="BtnValidarLunh">Validar</button>
+            <button class="Boton cta" id="BtnValidarLunh">Validar</button>
             <button class="Boton" id="BtnReiniciar">Atras</button>
        </div>
       </form>
+      <div class="modal-contenedor">
+        <div class="modal modal-cerrar">
+          <p class="cerrar">X</p>
+          <div class="modal-textos" id="modal-textos">
+            <h2 id="Mensaje"></h2>
+            <p id="TarjetaValida"></p>
+            <p id="TarjetaMascarada"></p>
+          </div>
+        </div>
+      </div>
     </div>
     </section> 
     
