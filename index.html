@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="flex slcTarjeta">
+      <img class="disneyLogo" src="img/disney_logo.png">
+      <h2>Tarjetas Personalizadas</h2>
+    </div>
+  </header>
+  <section id="Pantalla1" class="activo">
+    <div class="Pantalla">
+      <div class="flex slcTarjeta">
+        <h4>Elije el diseño de tu nueva tarjeta de</h4>
+        <select class="slcTipoTarjeta" name="TipodeTarjeta">
+          <option>Credito</option>
+          <option>Debito</option>
+        </select>
+      </div>
+      <div class="flex">
+        <div class="Tarjeta">
+          <img id="tarjeta1" class="imagen" src="img/disney1.png">
+          <p class="TarjetaNom">Diseño Lilo y stich</p>
+        </div>
+        <div class="Tarjeta">
+          <a id="tarjeta2"><img class="imagen" src="img/disney2.png"></a>
+          <p class="TarjetaNom">Diseño Toy story</p>
+        </div>
+        <div class="Tarjeta">
+          <a id="tarjeta3"><img class="imagen" src="img/disney3.png"></a>
+          <p class="TarjetaNom">Diseño Princesas Disney</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Pantalla2" class="oculto">
+    <div class="Pantalla contenidoP2">
+      <div id="TarjetaEscogida" class="TarjetaEscogida">
+
+        <img class="disneyimg" src="img/disney_logo.png">
+        <img class="chip" src="img/chip.png">
+
+        <p id="NumCard" class="Numero"></p>
+        <p id="NomCard" class="Nombre"></p>
+      </div>
+      <form>
+        <div class="DatosTarjeta" id="tarjeta">
+          <!-- solo numero,solo 16 digitos, -->
+          <div class="txtValidar">
+            <label>Numero de tarjeta</label>
+            <input class="input" placeholder="Numero de Tarjeta" type="tel" id="NumTarjeta" maxlength="19"
+              autocomplete="off" required>
+          </div>
+          <div class="TxtNombre">
+            <label>Nombre de tarjeta</label>
+            <input class="input" placeholder="Nombre" type="text" id="Nombre" autocomplete="off" required>
+          </div>
+          <button class="Boton cta" id="BtnValidarLunh">Validar</button>
+          <button class="Boton" id="BtnReiniciar">Atras</button>
+        </div>
+      </form>
+      <div class="modal-contenedor" id="modal-validacion-contenedor">
+        <div class="modal modal-cerrar" id="modal-validacion">
+          <p class="cerrar" id="modal-validacion-cerrar">X</p>
+          <div class="modal-textos" id="modal-validacion-textos">
+            <h2 id="Mensaje"></h2>
+            <p id="TarjetaValida"></p>
+            <p id="TarjetaMascarada"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer></footer>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
