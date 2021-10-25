@@ -2,7 +2,7 @@ import validator from './validator.js';
 
 console.log(validator);
 
-const CardNumber = document.getElementById("NumCard");
+const CardNumero = document.getElementById("NumCard");
 const CardNombre = document.getElementById("NomCard");
 const NumeroTarjeta = document.getElementById("NumTarjeta");
 const NombreTarjeta = document.getElementById("Nombre");
@@ -43,7 +43,7 @@ function validarCaracteres(evt) {
         }
     }
     NumeroTarjeta.value = nuevoString;
-    CardNumber.textContent = nuevoString;
+    CardNumero.textContent = nuevoString;
 }
 // funcion para validar el input del nombre
 function validarNombre(evt) {

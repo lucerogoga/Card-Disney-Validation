@@ -1,11 +1,11 @@
 const validator = {
 
-  isValid: function (Numero) {
+  isValid: function (numeroTarjeta) {
     //NumCard es un string
     //le quitamos los espacios al valor del input text
-    const Codigo = Numero.split(" ").join("");
+    const infoArr = numeroTarjeta.split(" ").join("");
     //lo convertimos en array 
-    const array = Codigo.split("");
+    const array = infoArr.split("");
     let suma = 0;
     for (let i = array.length - 1; i >= 0; i--) {
       let caracter = parseInt(array[i]);
@@ -32,12 +32,12 @@ const validator = {
 
   }
   ,
-  maskify: function (Numero) {
+  maskify: function (numeroTarjeta) {
     /*  const masked=Numero.replace(/.(?=.{4})/g, "#");
     return masked*/
 
     //convertir en array el numero de la tarjeta
-    const infoArr = Numero.split(" ").join("");
+    const infoArr = numeroTarjeta.split(" ").join("");
     //poner un numero negativo hace que empiece desde atras. guarda los ultimos 4 digitos en una variable
     let cuatroUltimos = infoArr.slice(-4);
     //declaramos un string que guardara el nuevo valor de los 12 numeros 
@@ -47,8 +47,8 @@ const validator = {
       arrStr = arrStr + '#'
     }
     //Combinando array enmascarado con los 4 ultimos digitos
-    let masked = arrStr + cuatroUltimos;
-    return masked
+    let mascara = arrStr + cuatroUltimos;
+    return mascara
   }
 };
 
