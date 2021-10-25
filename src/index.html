@@ -42,10 +42,8 @@
   <section id="Pantalla2" class="oculto">
     <div class="Pantalla contenidoP2">
       <div id="TarjetaEscogida" class="TarjetaEscogida">
-
         <img class="disneyimg" src="img/disney_logo.png">
         <img class="chip" src="img/chip.png">
-
         <p id="NumCard" class="Numero"></p>
         <p id="NomCard" class="Nombre"></p>
       </div>
@@ -60,6 +58,10 @@
           <div class="TxtNombre">
             <label>Nombre de tarjeta</label>
             <input class="input" placeholder="Nombre" type="text" id="Nombre" autocomplete="off" required>
+          </div>
+          <div class="alert oculto" id="alert-content">
+            <span class="closebtn" id="alert">&times;</span> 
+            <strong>Ingresa datos en los campos!</strong>
           </div>
           <button class="Boton cta" id="BtnValidarLunh">Validar</button>
           <button class="Boton" id="BtnReiniciar">Atras</button>
