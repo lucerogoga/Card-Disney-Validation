@@ -19,6 +19,7 @@ Pantalla 2
 ![prototipo 2](https://github.com/lucerogoga/LIM016-card-validation/blob/main/Prototipo/prototipo2.png)
 Ventana Emergente 
 ![prototipo 3](https://github.com/lucerogoga/LIM016-card-validation/blob/main/Prototipo/prototipo3.png)
+## 4. Paleta de Colores:
 
-
+![paleta](https://github.com/lucerogoga/LIM016-card-validation/blob/main/Prototipo/paleta.png)
 
