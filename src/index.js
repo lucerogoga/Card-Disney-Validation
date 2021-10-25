@@ -8,16 +8,30 @@ const NumeroTarjeta = document.getElementById("NumTarjeta");
 const NombreTarjeta = document.getElementById("Nombre");
 const BotonValidar = document.getElementById("BtnValidarLunh");
 
+const alertaContenido=document.getElementById("alert-content");
 
 NombreTarjeta.addEventListener("input", validarNombre);
 NumeroTarjeta.addEventListener("input", validarCaracteres);
 BotonValidar.addEventListener("click", function (e) {
     e.preventDefault()
-    const NumeroValidado = validator.isValid(NumeroTarjeta.value);
-    const Numeroenmascarado = validator.maskify(NumeroTarjeta.value)
-    popUp(NumeroValidado, Numeroenmascarado);
+    if ((NumeroTarjeta.value == "")||(NombreTarjeta.value == "") ){
+   // alert("campos vacio");
+    
+    alertaContenido.classList.toggle("oculto");
+    const alert=document.getElementById("alert");
+    alert.addEventListener("click",Botonalerta);
+    
+    }else{
+        const NumeroValidado = validator.isValid(NumeroTarjeta.value);
+        const Numeroenmascarado = validator.maskify(NumeroTarjeta.value)
+        popUp(NumeroValidado, Numeroenmascarado);
+    }
+   
 });
 
+function Botonalerta(){
+    alertaContenido.classList.toggle("oculto");
+    }
 /*funcion para validar el input solo Numero de Tarjeta,un 
 espacio cada 4 digitos,max length 19 (16 numero 3 espacios)*/
 function validarCaracteres(evt) {
@@ -140,6 +154,7 @@ function popUp(valido, mascara) {
         TarjetaValida.innerText = "Tu tarjeta es valida";
         TarjetaMascarada.innerText = mascara;
     } else {
+        //4644 4534 3433 8767
         Mensaje.innerText = "Lo sentimos ingrese otro numero de Tarjeta";
         imagenValidacion.setAttribute('src', "img/incorrecto.png")
         TarjetaValida.innerText = "Tu tarjeta no es valida";
